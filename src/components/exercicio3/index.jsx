@@ -22,7 +22,7 @@ function Exercicio3() {
 
 	return <div>
 		<h1 className='title'>Exercicio3</h1>
-		<div className= {styles.butões}>
+		<div className= "flex items-center justify-evenly">
 		{Array.map((butao) => (
 			<Butao 
 			OnClickHandler = {OnClickHandler}
