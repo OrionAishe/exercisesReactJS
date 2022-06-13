@@ -1,5 +1,10 @@
+import Butao from "./Butao";
+
 function Exercicio2() {
-	return <h1 className='title'>Exercicio2</h1>
+	return <div>
+		<h1 className='title'>Exercicio2</h1>
+		<Butao />
+	</div>
 }
 
-export default Exercicio2
+export default Exercicio2;
