@@ -1,5 +1,7 @@
 function Exercicio6() {
-	return <h1 className='title'>Exercicio6</h1>
+	return <div>
+		<h1 className='title'>Exercicio6</h1>
+		</div>
 }
 
 export default Exercicio6
