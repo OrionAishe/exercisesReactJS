@@ -1,27 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Butao from "./Butao";
 import Texto from "./Texto";
 
 function Exercicio7() {
-	const [Name, setName] = useState(null);
-	const [lastName, setLastname] = useState(null)
-
-	const ChangeNameHandler = (e) => {
-		setName(e.target.value);
-	}
-
-	const ChangeLastNameHandler = (e) => {
-		setLastname(e.target.value);
-	}
+	const Name = useRef();
+	const lastName = useRef();
 
 	const ClickHandler = () => {
-		alert(`Hello, ${Name} ${lastName}`)
+		alert(`Hello, ${Name.current.value} ${lastName.current.value}`)
 	}
 
 	return <div className="flex flex-col w-screen items-center">
 		<h1 className='title'>Exercicio7</h1>
-		<Texto placeholder="First Name" ChangeHandler={ChangeNameHandler} />
-		<Texto placeholder="Last Name" ChangeHandler={ChangeLastNameHandler} />
+		<Texto placeholder="First Name" reference={Name}/>
+		<Texto placeholder="Last Name" reference={lastName}/>
 		<Butao content="GREET ME" Click={ClickHandler} />
 	</div>
 }
